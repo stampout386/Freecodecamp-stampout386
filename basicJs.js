@@ -227,3 +227,111 @@ let result = fccRegex.test(myString);
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
+
+function reusableFunction() {
+    console.log('Hi World');
+}
+
+reusableFunction();
+
+function functionWithArgs(a, b) {
+    console.log(a + b);
+}
+functionWithArgs(3, 5);
+
+function timesFive(a) {
+    return a * 5;
+}
+
+function fun1() {
+    oopsGlobal = 5;
+}
+let myGlobal = 10;
+// Only change code above this line
+
+function fun2() {
+    var output = '';
+    if (typeof myGlobal != 'undefined') {
+        output += 'myGlobal: ' + myGlobal;
+    }
+    if (typeof oopsGlobal != 'undefined') {
+        output += ' oopsGlobal: ' + oopsGlobal;
+    }
+    console.log(output);
+}
+
+const outerWear = 'T-Shirt';
+
+function myOutfit() {
+    // Only change code below this line
+    let outerWear = 'sweater';
+    // Only change code above this line
+    return outerWear;
+}
+
+myOutfit();
+
+let sum = 0;
+
+function addThree() {
+    sum = sum + 3;
+}
+
+function addFive() {
+    sum = sum + 5;
+}
+
+addThree();
+addFive();
+
+let processed = 0;
+
+function processArg(num) {
+    return (num + 3) / 5;
+}
+processed = processArg(7);
+
+function nextInLine(arr, item) {
+    arr.push(item);
+    let a = arr.shift();
+    return a;
+}
+
+function welcomeToBooleans() {
+    return true;
+}
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return 'Yes, that was true';
+    }
+    return 'No, that was false';
+}
+
+function testEqual(val) {
+    if (val == 12) {
+        return 'Equal';
+    }
+    return 'Not Equal';
+}
+
+testEqual(10);
+
+function testStrict(val) {
+    if (val === 7) {
+        return 'Equal';
+    }
+    return 'Not Equal';
+}
+
+testStrict(10);
+
+function compareEquality(a, b) {
+    if (a === b) {
+        // Change this line
+        return 'Equal';
+    }
+    return 'Not Equal';
+}
+
+compareEquality(10, '10');
