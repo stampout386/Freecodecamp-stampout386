@@ -517,3 +517,272 @@ function golfScore(par, strokes) {
 }
 
 golfScore(5, 4);
+
+function caseInSwitch(val) {
+    let answer = '';
+    switch (val) {
+        case 1:
+            answer = 'alpha';
+            break;
+        case 2:
+            answer = 'beta';
+            break;
+        case 3:
+            answer = 'gamma';
+            break;
+        case 4:
+            answer = 'delta';
+            break;
+    }
+    return answer;
+}
+
+caseInSwitch(1);
+
+function switchOfStuff(val) {
+    let answer = '';
+    switch (val) {
+        case 'a':
+            answer = 'apple';
+            break;
+        case 'b':
+            answer = 'bird';
+            break;
+        case 'c':
+            answer = 'cat';
+            break;
+        default:
+            answer = 'stuff';
+            break;
+    }
+    return answer;
+}
+
+function sequentialSizes(val) {
+    let answer = '';
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = 'Low';
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = 'Mid';
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = 'High';
+            break;
+    }
+    return answer;
+}
+
+function chainToSwitch(val) {
+    let answer = '';
+    switch (val) {
+        case 'bob':
+            answer = 'Marley';
+            break;
+        case 42:
+            answer = 'The Answer';
+            break;
+        case 1:
+            answer = 'There is no #1';
+            break;
+        case 99:
+            answer = 'Missed me by this much!';
+            break;
+        case 7:
+            answer = 'Ate Nine';
+            break;
+    }
+    return answer;
+}
+
+function isLess(a, b) {
+    return a < b;
+}
+
+isLess(10, 15);
+
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined;
+    }
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2, 2);
+
+let count = 0;
+
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            if (count > 0) {
+                return count + ' ' + 'Bet';
+            } else {
+                return count + ' ' + 'Hold';
+            }
+        case 7:
+        case 8:
+        case 9:
+            if (count > 0) {
+                return count + ' ' + 'Bet';
+            } else {
+                return count + ' ' + 'Hold';
+            }
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count--;
+            if (count > 0) {
+                return count + ' ' + 'Bet';
+            } else {
+                return count + ' ' + 'Hold';
+            }
+    }
+    return 'Change Me';
+}
+
+const myDog = {
+    name: 'Paffi',
+    legs: 4,
+    tails: 1,
+    friends: ['peoples', 'me'],
+};
+
+const testObj = {
+    hat: 'ballcap',
+    shirt: 'jersey',
+    shoes: 'cleats',
+};
+
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+
+const testObj = {
+    'an entree': 'hamburger',
+    'my side': 'veggies',
+    'the drink': 'water',
+};
+
+const entreeValue = testObj['an entree'];
+const drinkValue = testObj['the drink'];
+
+const testObj = {
+    12: 'Namath',
+    16: 'Montana',
+    19: 'Unitas',
+};
+
+const playerNumber = 16;
+const player = testObj[playerNumber];
+
+const myDog = {
+    name: 'Coder',
+    legs: 4,
+    tails: 1,
+    friends: ['freeCodeCamp Campers'],
+};
+
+myDog.name = 'Happy Coder';
+
+const myDog = {
+    name: 'Happy Coder',
+    legs: 4,
+    tails: 1,
+    friends: ['freeCodeCamp Campers'],
+};
+
+myDog.bark = 'woof';
+
+const myDog = {
+    name: 'Happy Coder',
+    legs: 4,
+    tails: 1,
+    friends: ['freeCodeCamp Campers'],
+    bark: 'woof',
+};
+
+delete myDog.tails;
+
+function phoneticLookup(val) {
+    let result = '';
+    let lookup = {
+        alpha: 'Adams',
+        bravo: 'Boston',
+        charlie: 'Chicago',
+        delta: 'Denver',
+        echo: 'Easy',
+        foxtrot: 'Frank',
+    };
+    result = lookup[val];
+    return result;
+}
+
+phoneticLookup('charlie');
+
+function checkObj(obj, checkProp) {
+    if (obj.hasOwnProperty(checkProp)) {
+        return obj[checkProp];
+    } else {
+        return 'Not Found';
+    }
+}
+
+const myStorage = {
+    car: {
+        inside: {
+            'glove box': 'maps',
+            'passenger seat': 'crumbs',
+        },
+        outside: {
+            trunk: 'jack',
+        },
+    },
+};
+
+const gloveBoxContents = myStorage.car.inside['glove box'];
+
+const myPlants = [
+    {
+        type: 'flowers',
+        list: ['rose', 'tulip', 'dandelion'],
+    },
+    {
+        type: 'trees',
+        list: ['fir', 'pine', 'birch'],
+    },
+];
+
+const secondTree = myPlants[1].list[1];
+
+if (value === '') {
+    delete records[id][prop];
+} else if (prop === 'tracks') {
+    records[id][prop] = records[id][prop] || [];
+    records[id][prop].push(value);
+} else {
+    records[id][prop] = value;
+}
+return records;
+
+function pushArr() {
+    const myArray = [];
+    let i = 5;
+    while (i > -1) {
+        myArray.push(i);
+        i--;
+    }
+}
