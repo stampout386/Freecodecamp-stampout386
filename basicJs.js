@@ -884,3 +884,9 @@ function lookUpProfile(name, prop) {
     }
     return 'No such contact';
 }
+
+function randomFraction() {
+    let random = Math.random();
+
+    return random;
+}
