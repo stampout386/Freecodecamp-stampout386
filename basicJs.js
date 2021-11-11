@@ -924,3 +924,9 @@ checkSign(10);
 function countdown(n) {
     return n < 1 ? [] : [n].concat(countdown(n - 1));
 }
+
+function rangeOfNumbers(startNum, endNum) {
+    return startNum === endNum
+        ? [startNum]
+        : rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+}
