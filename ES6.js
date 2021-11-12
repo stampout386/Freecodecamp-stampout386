@@ -179,3 +179,5 @@ export default function subtract(x, y) {
 import subtract from './math_functions.js';
 
 subtract(7, 4);
+
+const makeServerRequest = new Promise((resolve, reject) => {});
